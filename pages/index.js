@@ -1,7 +1,8 @@
 import Head from 'next/head'
-//import Coins from '../components/Coins';
+import 'animate.css';
+import Stock from '../Components/stock';
 import styles from  "../styles/Home.module.css";
-//import CoinList from '../components/SearchBar/CoinList';
+
 
 const cryptoEndpoint = 'https://api.abyiss.com/v1/coinbasepro/BTC-USD/currentprice?apiKey=Ql6A^^5)JIo*((*4)BY)kMi81^*40bSXPl^';
 
@@ -21,29 +22,82 @@ export default function Home ({ data }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Cryptoland</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1 className="title">
-          Welcome to CryptoLand
+     
+      <div className={styles.title}>
+        <h1 class="animate__animated animate__bounce">
+        CRYPTO LAND
         </h1>
-         
-         <div>
-        <h1>Bitcoin price</h1>
-        <p>{data.price}</p>
-        <p>{data.market}</p>
-        <p>{data.exchange}</p>
-        <p>{data.timestamp}</p>
         </div>
-      </main>
 
-     
-     
-     
-     
+         
+    
+        <div className={styles.stock}>
+        <p>NASDAQ</p>
+        <p>AAPL</p>
+        <p>AMZN</p>
+        <p>ETH</p>
+        <p>STZ</p>
+        <p>JPM</p>
+        <p>BTC</p>
+        <p>OPQ</p>
+        <p>AMP</p>
+        <p>EXO</p>
+        <p>DOGE</p>
+        </div>
+
+       
+
+        <div className={styles.currencyContainer}>
+            <div className={styles.text}>CURRENCY BTC</div>
+          <div className={styles.btc}>
+            <div className={styles.marketContainer}>
+              <h2>Market</h2>
+              <p>{data.market}</p>
+            </div>
+            <div className={styles.priceContainer}>
+              <h2>Price</h2>
+              <p>{data.price}</p>
+            </div>
+           </div>
+
+            
+        </div>
+        <div className={styles.stock}>
+        <p>NASDAQ</p>
+        <p>AAPL</p>
+        <p>AMZN</p>
+        <p>ETH</p>
+        <p>STZ</p>
+        <p>JPM</p>
+        <p>BTC</p>
+        <p>OPQ</p>
+        <p>AMP</p>
+        <p>EXO</p>
+        <p>DOGE</p>
+        
+        </div>
+
+      <footer className={styles.footer}>
+      <p>2021 Cryptoland</p>
+    </footer>
+    
     </div>
+       
+
+       
+
+    
+ 
+    
+   
+    
   );
+
+ 
+ 
 }
 
 
