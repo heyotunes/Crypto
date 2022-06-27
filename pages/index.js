@@ -5,12 +5,12 @@ import styles from  "../styles/Home.module.css";
 
 
 
-//const cryptoEndpoint = 'https://api.abyiss.com/v1/coinbasepro/BTC-USD/currentprice?apiKey=process.env.ABYISS_API_KEY';
+const cryptoEndpoint = 'https://api.abyiss.com/v1/coinbasepro/BTC-USD/currentprice?apiKey=*KJj3!K3Q1l@Yt@t6*0s)N!@bSl2^SM*5xu';
 //fetching the content from abyiss API and storing it in a variable
-//const option = process.env.ABYISS_API_KEY
+
 
 export async function getServerSideProps() { // used async await to get the response while i pass the variable into the function
- const res = await fetch('https://api.abyiss.com/v1/coinbasepro/BTC-USD/currentprice?apiKey=*KJj3!K3Q1l@Yt@t6*0s)N!@bSl2^SM*5xu');  
+ const res = await fetch(cryptoEndpoint);  
   const data = await res.json();  //i converted the response with JSON into javascript object so that its readable by the browser
   return {
     props: {   //stored the response in "data" variable 
