@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import 'animate.css';
-import Stock from '../Components/stock';
 import styles from  "../styles/Home.module.css";
 
 
@@ -26,9 +25,25 @@ export default function Home ({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      
+      
+  
+        <div className={styles.stock}>
+        <p>NASDAQ</p>
+        <p>AAPL</p>
+        <p>AMZN</p>
+        <p>ETH</p>
+        <p>STZ</p>
+        <p>JPM</p>
+        <p>BTC</p>
+        <p>OPQ</p>
+        <p>AMP</p>
+        <p>EXO</p>
+        <p>DOGE</p>
+        
+        </div>
       <div className={styles.title}>
         <h1 class="animate__animated animate__bounce">
-        CRYPTO LAND
+       WELCOME TO CRYPTO LAND
         </h1>
         </div>
 
